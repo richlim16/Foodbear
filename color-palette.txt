@@ -1,0 +1,4 @@
+#357370 - the darkgreen one
+#eee - bg color
+#444 - dark grey
+#BDA86B - gold

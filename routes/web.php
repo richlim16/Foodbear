@@ -21,5 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/food', FoodController::class);
-Route::get('/food/form', [FoodController::class, 'create']);
-Route::post('/food/add', [FoodController::class, 'store']);
+Route::get('/foodForm', [FoodController::class, 'create']);
+Route::post('/addFood', [FoodController::class, 'store']);

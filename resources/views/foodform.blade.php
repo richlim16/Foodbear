@@ -1,17 +1,40 @@
-@extends('layouts.app')
+@extends('layouts/app')
 
 @section('content')
-<h1>hi</h1>
   <div class="form">
     <div id="form-container">
-      <form class="form" action="/food/add" method="post">
-        <h1>FOOD INFO</h1>
+      <h1>FOOD INFO</h1>
+      <form action="/addFood" method="post">
         @csrf
-        <label for="name">Food Name</label>
-        <input type="text" name="name"class="name" autocomplete="off">
-        <label for="price">Price</label>
-        <input type="number" name="price" class="price" autocomplete="off" placeholder="Php">
-        <button type="submit">Send it</button>
+        <div class="form-group row">
+            <label for="foodName" class="col-md-4 col-form-label text-md-right">Food Name</label>
+
+            <div class="col-md-6">
+                <input id="foodName" type="text" name="foodName" required autocomplete="off" autofocus>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="price" class="col-md-4 col-form-label text-md-right">Food Price</label>
+
+            <div class="col-md-6">
+                <input id="price" type="text" name="price"  required autocomplete="off" autofocus placeholder="Php">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="description" class="col-md-4 col-form-label text-md-right">Description</label>
+
+            <div class="col-md-6">
+                <textarea id="description" type="text" name="description"  required autocomplete="off" autofocus placeholder="Php"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group row mb-0">
+            <div class="col-md-6 offset-md-4">
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </div>
+        </div>
       </form>
     </div>
   </div>

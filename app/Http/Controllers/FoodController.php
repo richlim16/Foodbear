@@ -37,10 +37,10 @@ class FoodController extends Controller
     {
         $foodName = $request->input('foodName');
         $price = $request->input('price');
-        $description = $request->ipnut('description');
+        $description = $request->input('description');
         $food = new FoodModel;
-        $food->foodName = $username;
-        $food->price = $password;
+        $food->foodName = $foodName;
+        $food->price = $price;
         $food->description = $description;
 
         $food->save();

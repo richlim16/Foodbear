@@ -19,10 +19,14 @@
 #form-container h1{
   margin-bottom: 50px;
 }
-#form-container input{
+#form-container input, #form-container textarea{
+  width: 200px;
+  border-radius: 5px;
+  padding-left: 5px;
   border: 2px solid #444;
+  margin-bottom: 10px;
   transition: .5s;
 }
-#form-container input:focus{
+#form-container input:focus, #form-container textarea:focus{
   box-shadow: 6px 6px  #fada07;
 }

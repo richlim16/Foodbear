@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\UserModel;
+use App\Models\FoodModel;
 
-class UserController extends Controller
+class FoodController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('addUser');
+        //
     }
 
     /**
@@ -24,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('foodform');
     }
 
     /**
@@ -35,15 +35,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $username = $request->input('username');
-        $password = $request->input('password');
-        $user = new UserModel;
-        $user->username = $username;
-        $user->password = $password;
+        $foodName = $request->input('foodName');
+        $price = $request->input('price');
+        $description = $request->ipnut('description');
+        $food = new FoodModel;
+        $food->foodName = $username;
+        $food->price = $password;
+        $food->description = $description;
 
-        $user->save();
+        $food->save();
 
-        return redirect('/');
+        return redirect('/home');
 
     }
 

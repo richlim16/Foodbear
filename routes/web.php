@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ViewController;
-use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\FoodController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +13,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::resource('/', ViewController::class);
-Route::resource('/user', UserController::class);
-Route::get('/form', [ViewController::class, 'create']);
-Route::post('/add', [ViewController::class, 'store']);
+Route::get('/', function () {
+    return view('auth\login');
+});
 
+Auth::routes();
 
-Route::post('/user/add', [UserController::class, 'store']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/food', FoodController::class);
+Route::get('/food/form', [FoodController::class, 'create']);
+Route::post('/food/add', [FoodController::class, 'store']);

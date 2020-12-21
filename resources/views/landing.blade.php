@@ -102,7 +102,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-1 offset-md opening-hour">
+            <div class="col-2 offset-md ">
                 <div class="top-loc-footer">
                     <b><p class="footer-title">Opening Hours</p></b>
                     <p class="footer-underline1"></p>
@@ -114,7 +114,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-1 offset-md">
+            <div class="col-3 offset-md">
                 <div class="top-loc-footer">
                     <b><p class="footer-title">Contact Us</p></b>
                     <p class="footer-underline"></p>

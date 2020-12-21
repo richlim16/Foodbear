@@ -60,6 +60,6 @@ html{
     .footer-desc{font-size: 12px; }
     .highlight{color:#51dfff;}
 
-.navigation{margin-right: 70px; margin-left: 50px;}
-.opening-hour{margin-right: 100px;}
+.navigation{margin-right: 70px; margin-left: 20px;}
+/* .opening-hour{margin-right: 70px;} */
 .inline-padding{padding-inline-start: 0;}

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +16,10 @@ use App\Http\Controllers\FoodController;
 
 Route::get('/', function () {
     return view('auth\login');
+});
+
+Route::get('/landing', function(){
+    return view('landing');
 });
 
 Auth::routes();

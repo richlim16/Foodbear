@@ -1,0 +1,65 @@
+@media screen and (max-width: 450px){@viewport{width: 300px;}}
+@media screen and (min-width: 768px) and (max-width: 959px) { @viewport { width: 768px; } }
+
+html{
+    scroll-behavior: smooth;}
+
+.container{
+    font-size: large;
+    margin-bottom: 35px;}
+
+.center{text-align:center;}
+
+.gap{margin-top: 45px;}
+.separator{margin-top: 60px; margin-bottom: 60px;}
+.separator-top{margin-top: 60px;}
+.separator-bottom{margin-bottom: 60px;}
+    
+.foodbear-menu{
+    /* Supposedly wla na width */
+    width: 1910px;
+
+    position: fixed;
+    top: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 0;
+    z-index: 500;
+    text-transform: uppercase;
+    font-family: Montserrat;}
+    .foodbear-menu li a{
+        float: right;
+        color: white;
+        font-weight: 500;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-top: 10px;}
+    .foodbear-menu a:hover{color: #31939e;}
+
+.div-separator{width: 100px; border-bottom-color: #51dfff; border-bottom-style: solid; border-bottom-width: 3px; margin-left: auto; margin-right: auto;}
+
+/* Welcome */
+.welcome-container{margin-top: 70px;}
+.welcome-position{margin-top: 180px; text-align: center;}
+.welcome-title{font-weight: bolder;font-size: 38px; letter-spacing: 1.5px; color:#fff; text-transform: uppercase;}
+.welcome-subtitle{color: white; font-size: 16px; margin-top: 15px;}
+
+/* Product */
+.product-title{text-transform: uppercase; font-weight: 700;}
+
+/* Footer */
+.footer-title{text-transform: uppercase;}
+.footer-font{background-color:#333; color: white; }
+    .footer-underline{width: 95px; border-bottom-color: #51dfff; border-bottom-style: solid; border-bottom-width: 3px;}
+    .footer-underline1{width: 130px; border-bottom-color: #51dfff; border-bottom-style: solid; border-bottom-width: 3px;}
+    .footer-title{font-size: 14px; margin-bottom: 0;}
+        .footer-menu li{font: 10px; color: white; list-style: none;}
+    .footer-desc{font-size: 12px; }
+    .highlight{color:#51dfff;}
+
+.navigation{margin-right: 70px; margin-left: 50px;}
+.opening-hour{margin-right: 100px;}
+.inline-padding{padding-inline-start: 0;}

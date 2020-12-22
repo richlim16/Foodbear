@@ -25,9 +25,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a href=""><img src="images/foodbear-logo-w-title.png" alt="" srcset="" width="35%" style="float: left; text-align: center; padding: 10px 0px"></a>
+                <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Food Bear') }}
-                </a>
+                </a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -42,11 +43,9 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::has('landing'))
                                 <li  class="nav-item">
-                                    <a class="nav-link" href="/landing">HOME</a>
+                                    <a class="nav-link" href="/landing">Home</a>
                                 </li>
-                            @endif
 
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -61,7 +60,7 @@
                             @endif
                         @else
                             <li  class="nav-item">
-                                <a class="nav-link" href="/landing">HOME</a>
+                                <a class="nav-link" href="/landing">Home</a>
                             </li>
                             <li>
                                 <a class="nav-link" href="/foodForm"> FOOD FORM</a>
@@ -89,7 +88,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>

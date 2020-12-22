@@ -19,12 +19,24 @@
     </style>
 
 <body>
-    <ul class="foodbear-menu">
-        <a href=""><img src="images/foodbear-logo-w-title.png" alt="" srcset="" width="8%" style="float: left; text-align: center; padding: 10px 0px"></a>
-        <li><a class="" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-        <li><a class="" href="#product">Products</a></li>
-        <li><a class="active" href="#top">Home</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="container" style="margin-bottom: 0px;">
+            <a href=""><img src="images/foodbear-logo-w-title.png" alt="" srcset="" width="35%" style="float: left; text-align: center; padding: 10px 0px"></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li  class="nav-item">
+                        <a class="nav-link" href="/landing">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="welcome-container" id="top">
         <div class="welcome">
@@ -97,7 +109,7 @@
                     <p class="footer-underline"></p>
                     <ul class="footer-menu inline-padding">
                         <a href="#top"><li>Top</li></a>
-                        <a href="#product"><li>Product</li></a>
+                        <a href="#promo"><li>Product</li></a>
                         <a href=""><li>Policy</li></a>
                     </ul>
                 </div>

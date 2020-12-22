@@ -4,9 +4,7 @@
 html{
     scroll-behavior: smooth;}
 
-.container{
-    font-size: large;
-    margin-bottom: 35px;}
+.container{margin-bottom: 35px;}
 
 .center{text-align:center;}
 
@@ -18,7 +16,6 @@ html{
 .foodbear-menu{
     /* Supposedly wla na width */
     width: 1500px;
-
     position: fixed;
     top: 0;
     list-style-type: none;
@@ -42,7 +39,7 @@ html{
 .div-separator{width: 100px; border-bottom-color: #51dfff; border-bottom-style: solid; border-bottom-width: 3px; margin-left: auto; margin-right: auto;}
 
 /* Welcome */
-.welcome-container{margin-top: 60px;}
+/* .welcome-container{margin-top: 60px;} */
 .welcome-position{margin-top: 180px; text-align: center;}
 .welcome-title{font-weight: bolder;font-size: 38px; letter-spacing: 1.5px; color:#fff; text-transform: uppercase;}
 .welcome-subtitle{color: white; font-size: 16px; margin-top: 15px;}
@@ -59,7 +56,6 @@ html{
         .footer-menu li{font: 10px; color: white; list-style: none;}
     .footer-desc{font-size: 12px; }
     .highlight{color:#51dfff;}
-
+.inline-padding{padding-inline-start: 0;}
 .navigation{margin-right: 70px; margin-left: 20px;}
 /* .opening-hour{margin-right: 70px;} */
-.inline-padding{padding-inline-start: 0;}

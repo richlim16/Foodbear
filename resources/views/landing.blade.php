@@ -1,45 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Bear</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/landing.css">
-</head>
-
-<style>
-    .welcome-container{
-        /* background:linear-gradient(0deg, #ffa5514d, #7fff51a1), url("images/desk13.jpg"); */
-        background-image: url("images/foodbg-3.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 570px;}
-    </style>
-
-<body>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container" style="margin-bottom: 0px;">
-            <a href=""><img src="images/foodbear-logo-w-title.png" alt="" srcset="" width="35%" style="float: left; text-align: center; padding: 10px 0px"></a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li  class="nav-item">
-                        <a class="nav-link" href="/landing">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#product">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+@extends('layouts\app')
+@section('content')
 
     <div class="welcome-container" id="top">
         <div class="welcome">
@@ -98,7 +58,7 @@
                     <a href="AdminLogin.php"><img class="footer-logo" src="images/foodbear-logo-w-title.png" alt="logo" style="width: 250px; margin-bottom: 10px;"></a>
                     <p style="text-align: justify;">
                         Food Bear group is the leading global online food delivery marketplace. Headquatered in Cebu, Philippines. It operates
-                        is more than 40 cities in the nation. Food Bear allows users to conveniently discover food around their neighborhood and directly order 
+                        is more than 40 cities in the nation. Food Bear allows users to conveniently discover food around their neighborhood and directly order
                         their favourite meals online.<br><br>
 
                         In the Philippines, Food Bear was launched in December 2020 and has since grown to over 1,000 partner restaurants nationwide.
@@ -148,5 +108,4 @@
             </div>
         </div>
     </footer>
-</body>
-</html>
+@endsection

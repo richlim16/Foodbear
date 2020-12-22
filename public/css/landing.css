@@ -12,7 +12,7 @@ html{
 .separator{margin-top: 60px; margin-bottom: 60px;}
 .separator-top{margin-top: 60px;}
 .separator-bottom{margin-bottom: 60px;}
-    
+
 .foodbear-menu{
     /* Supposedly wla na width */
     width: 1500px;
@@ -59,3 +59,10 @@ html{
 .inline-padding{padding-inline-start: 0;}
 .navigation{margin-right: 70px; margin-left: 20px;}
 /* .opening-hour{margin-right: 70px;} */
+.welcome-container{
+    /* background:linear-gradient(0deg, #ffa5514d, #7fff51a1), url("images/desk13.jpg"); */
+    background-image: url('../images/bg-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 570px;}

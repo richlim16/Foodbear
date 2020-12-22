@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/form.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
 </head>
 <body>
     <div id="app">

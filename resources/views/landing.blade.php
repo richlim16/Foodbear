@@ -47,7 +47,7 @@
                 <div class="row">
                     <div class="col center gap">
                         <h1 class="welcome-title">Welcome to Food Bear!</h1>
-                        <p class="welcome-subtitle">For us, it's not just about bringing you good food from your favourite restaurants. It's about making a connection, which is why we sit down with the chefs,<br> dreaming up menus that will arrive fresh and full of flavour. Try us!</p>
+                        <p class="col-7 welcome-subtitle position">For us, it's not just about bringing you good food from your favourite restaurants. It's about making a connection, which is why we sit down with the chefs, dreaming up menus that will arrive fresh and full of flavour. Try us!</p>
                     </div>
                 </div>
             </div>

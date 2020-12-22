@@ -40,7 +40,7 @@ html{
 
 /* Welcome */
 /* .welcome-container{margin-top: 60px;} */
-.welcome-position{margin-top: 180px; text-align: center;}
+.position{margin-left: auto; margin-right: auto;}
 .welcome-title{font-weight: bolder;font-size: 38px; letter-spacing: 1.5px; color:#fff; text-transform: uppercase;}
 .welcome-subtitle{color: white; font-size: 16px; margin-top: 15px;}
 

@@ -10,14 +10,14 @@ html{
 
 .center{text-align:center;}
 
-.gap{margin-top: 45px;}
+.gap{margin-top: 50px;}
 .separator{margin-top: 60px; margin-bottom: 60px;}
 .separator-top{margin-top: 60px;}
 .separator-bottom{margin-bottom: 60px;}
     
 .foodbear-menu{
     /* Supposedly wla na width */
-    width: 1910px;
+    width: 1500px;
 
     position: fixed;
     top: 0;
@@ -42,7 +42,7 @@ html{
 .div-separator{width: 100px; border-bottom-color: #51dfff; border-bottom-style: solid; border-bottom-width: 3px; margin-left: auto; margin-right: auto;}
 
 /* Welcome */
-.welcome-container{margin-top: 70px;}
+.welcome-container{margin-top: 60px;}
 .welcome-position{margin-top: 180px; text-align: center;}
 .welcome-title{font-weight: bolder;font-size: 38px; letter-spacing: 1.5px; color:#fff; text-transform: uppercase;}
 .welcome-subtitle{color: white; font-size: 16px; margin-top: 15px;}

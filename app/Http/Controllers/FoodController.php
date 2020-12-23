@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\FoodModel;
 use App\Models\Cart;
-use App\Models\Hitory;
+use App\Models\HistoryModel;
 
 class FoodController extends Controller
 {
@@ -68,9 +68,11 @@ class FoodController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function history(Request $request)
     {
-        
+        $id = $request->input('customerId');
+        $history = HistoryModel::all()->where('customerId',"=" ,$id);
+        return view('history')->with('history', $history);
     }
 
     /**

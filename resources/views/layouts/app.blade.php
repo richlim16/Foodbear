@@ -66,6 +66,9 @@
                             <li  class="nav-item">
                                 <a class="nav-link" href="/landing">Home</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/menu">Menu</a>
+                            </li>
                             <li>
                                 <a class="nav-link" href="/foodForm">Food Form</a>
                             </li>

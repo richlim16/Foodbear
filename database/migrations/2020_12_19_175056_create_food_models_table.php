@@ -16,7 +16,7 @@ class CreateFoodModelsTable extends Migration
         Schema::create('food_models', function (Blueprint $table) {
             $table->id();
             $table->string('foodName');
-            $table->integer('price');
+            $table->float('price');
             $table->text('description');
             $table->string('foodPic');
             $table->timestamps();

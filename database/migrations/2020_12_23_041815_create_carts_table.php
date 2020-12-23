@@ -15,7 +15,8 @@ class CreateCartsTable extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('foodId');
+            $table->string('foodName');
+            $table->integer('price');
             $table->foreignId('customerId');
             $table->timestamps();
         });

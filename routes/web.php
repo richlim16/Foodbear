@@ -21,14 +21,14 @@ Route::get('/', function () {
 Route::get('/landing', function(){
     return view('landing');
 });
-Route::get('/add-to-cart/{id}', [
-    'uses' => 'FoodController@getAddtoCart',
-    'as' => 'food.addToCart'
-]);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/food', FoodController::class);
+Route::get('/menu', [FoodController::class, 'menu']);
 Route::get('/foodForm', [FoodController::class, 'create']);
 Route::post('/addFood', [FoodController::class, 'store']);
 Route::post('/history', [FoodController::class, 'history']);
+Route::post('/addToCart', [FoodController::class, 'addToCart']);
+Route::post('/cart', [FoodController::class, 'showCart']);

@@ -63,9 +63,15 @@
                                 </li>
                             @endif
                         @else
+                            @if(Auth::user())
                             <li class="nav-item">
-                                <a class="nav-link" href="/cart">Cart</a>
+                            <form class="nav-link" action="/cart" method="post">
+                              @csrf
+                              <input type="hidden" id="customerId" name="customerId"value="{{Auth::user()->id}}">
+                              <input type="submit" value="Cart">
                             </li>
+                            </form>
+                            @endif
                             <li  class="nav-item">
                                 <a class="nav-link" href="/landing">Home</a>
                             </li>

@@ -11,7 +11,7 @@
     <tr>
     <td>{{$item['id']}}</td>
     <td>{{$item['foodName']}}</td>
-    <td>Php 99</td>
+    <td>{{item['price']}}</td>
     </tr>
     @endforeach
   </tbody>

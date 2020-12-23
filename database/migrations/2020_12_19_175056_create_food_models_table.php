@@ -21,6 +21,22 @@ class CreateFoodModelsTable extends Migration
             $table->string('foodPic');
             $table->timestamps();
         });
+        DB::table('food_models')->insert(
+          array(
+            'foodName' => 'Coffee',
+            'price' => 5000,
+            'description' => 'For some midnight fuel',
+            'foodPic' => 'coffee.jpg'
+          )
+        );
+        DB::table('food_models')->insert(
+          array(
+            'foodName' => 'Onigiri',
+            'price' => 100,
+            'description' => 'Some korean rice shit',
+            'foodPic' => 'onigiri.jpg'
+          )
+        );
     }
 
     /**

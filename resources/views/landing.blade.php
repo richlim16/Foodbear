@@ -72,7 +72,7 @@
                     <p class="footer-underline"></p>
                     <ul class="footer-menu inline-padding">
                         <a href="#top"><li>Top</li></a>
-                        <a href="#promo"><li>Product</li></a>
+                        <a href="/menu"><li>Menu</li></a>
                         <a href=""><li>Policy</li></a>
                     </ul>
                 </div>

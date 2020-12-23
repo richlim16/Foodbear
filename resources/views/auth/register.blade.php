@@ -3,14 +3,9 @@
 @section('content')
 
 <style>
-    .login-container{
-        /* background:linear-gradient(0deg, #ffa5514d, #7fff51a1), url("images/desk13.jpg"); */
-        background-image: url("images/foodbg-2.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 700px;}
+    
 </style>
+
     <div class="login-container">
         <div class="form">
             <div id="register-container">

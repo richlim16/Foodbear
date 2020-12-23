@@ -1,16 +1,31 @@
 @extends('layouts\app')
 @section('content')
 
-  <div class="menu">
-    @foreach($food as $food)
-      <div class="item">
-        <h1 id='foodName'>{{$food['foodName']}}</h1>
-        <h3 id="price">{{$food['price']}}</h3>
-        <p id="description">{{$food['description']}}</p>
-        <img src="{{asset('storage/images/'.$food->foodPic)}}" alt="Food Photo Here">
-      </div>
-    @endforeach
-  </div>
+    <div class="menu-container" id="top"></div>
+
+    <div class="container">
+        <div class="row separator-top center">
+            <div class="col offset-md">
+                <h1 class="product-title">Product</h1>
+                <p class="div-separator"></p>
+                <h6>Find your food cravings now!</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            @foreach($food as $food)
+            <div class="col-3 offset-md center">
+                <img src="{{asset('../images/'.$food->foodPic)}}" alt="Food Photo Here" class="foodImage">
+                <h4 id='foodName' class="foodname">{{$food['foodName']}}</h4>
+                <h5 id="price">₱ {{$food['price']}}.00</h5>
+                <p id="description">{{$food['description']}}</p>
+            </div>
+            @endforeach
+        </div>
+    </div>
+
     <footer class="footer footer-font">
         <div class="row">
             <div class="col-4 offset-md-1">
@@ -32,7 +47,7 @@
                     <p class="footer-underline"></p>
                     <ul class="footer-menu inline-padding">
                         <a href="#top"><li>Top</li></a>
-                        <a href="#promo"><li>Product</li></a>
+                        <a href="/menu"><li>Menu</li></a>
                         <a href=""><li>Policy</li></a>
                     </ul>
                 </div>

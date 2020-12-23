@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Food Bear') }}</title>
+    <title>Food Bear</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -20,12 +20,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/form.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend.css') }}">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container" style="margin-bottom: 0px;">
                 <a href=""><img src="images/foodbear-logo-w-title.png" alt="" srcset="" width="35%" style="float: left; text-align: center; padding: 10px 0px"></a>
                 <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Food Bear') }}
@@ -48,9 +48,6 @@
                                     <a class="nav-link" href="/landing">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/landing#product">Products</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link" href="/menu">Menu</a>
                                 </li>
 
@@ -68,9 +65,6 @@
                         @else
                             <li  class="nav-item">
                                 <a class="nav-link" href="/landing">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/landing#product">Products</a>
                             </li>
                             <li>
                                 <a class="nav-link" href="/foodForm">Food Form</a>

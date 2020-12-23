@@ -12,39 +12,35 @@ html{
 .separator{margin-top: 60px; margin-bottom: 60px;}
 .separator-top{margin-top: 60px;}
 .separator-bottom{margin-bottom: 60px;}
-
-.foodbear-menu{
-    /* Supposedly wla na width */
-    width: 1500px;
-    position: fixed;
-    top: 0;
-    list-style-type: none;
-    overflow: hidden;
-    background-color: #333;
-    margin-bottom: 0;
-    z-index: 500;
-    text-transform: uppercase;
-    font-family: Montserrat;}
-    .foodbear-menu li a{
-        float: right;
-        color: white;
-        font-weight: 500;
-        display: block;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        margin-top: 10px;}
-    .foodbear-menu a:hover{color: #31939e;}
-
 .div-separator{width: 100px; border-bottom-color: #51dfff; border-bottom-style: solid; border-bottom-width: 3px; margin-left: auto; margin-right: auto;}
 
-/* Welcome */
+/* Login/Register/FoodForm CSS */
+.login-container{
+    /* background:linear-gradient(0deg, #ffa5514d, #7fff51a1), url("images/desk13.jpg"); */
+    background-image: url("../images/foodbg-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;}
+
+input .border-remove{border: 0px solid white;}
+
+
+/* Home CSS */
+/* Welcome Section */
 /* .welcome-container{margin-top: 60px;} */
+.welcome-container{
+    /* background:linear-gradient(0deg, #ffa5514d, #7fff51a1), url("images/desk13.jpg"); */
+    background-image: url('../images/foodbg-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 570px;}
 .position{margin-left: auto; margin-right: auto;}
 .welcome-title{font-weight: bolder;font-size: 38px; letter-spacing: 1.5px; color:#fff; text-transform: uppercase;}
 .welcome-subtitle{color: white; font-size: 16px; margin-top: 15px;}
 
-/* Product */
+/* Product Section*/
 .product-title{text-transform: uppercase; font-weight: 700;}
 
 /* Footer */
@@ -59,10 +55,17 @@ html{
 .inline-padding{padding-inline-start: 0;}
 .navigation{margin-right: 70px; margin-left: 20px;}
 /* .opening-hour{margin-right: 70px;} */
-.welcome-container{
+
+
+/* Menu CSS */
+.menu-container{
     /* background:linear-gradient(0deg, #ffa5514d, #7fff51a1), url("images/desk13.jpg"); */
-    background-image: url('../images/foodbg-3.jpg');
+    background-image: url('../images/foodbg-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 570px;}
+    height: 250px;
+    margin-bottom: 50px;}
+
+.foodname{font-weight: 700; margin-top: 10px;}
+.foodImage{border-radius: 25px;}

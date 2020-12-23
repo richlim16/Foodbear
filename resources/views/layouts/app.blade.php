@@ -86,10 +86,16 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+                                    @if(Auth::user())
+                                    <form action="/history" method="post">
+                                      @csrf
+                                      <input type="hidden" id="customerId" name="customerId"value="{{Auth::user()->id}}">
+                                      <button type="submit" class="dropdown-item">History</button>
+                                    </form>
+                                    @endif
                                 </div>
                             </li>
                         @endguest

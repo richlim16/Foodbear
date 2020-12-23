@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FoodModel;
+use App\Models\Cart;
+use App\Models\Hitory;
 
 class FoodController extends Controller
 {
@@ -68,7 +70,7 @@ class FoodController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

@@ -17,7 +17,7 @@
         <div class="row">
             @foreach($food as $food)
             <div class="col-3 offset-md center">
-                <img src="{{asset('../images/'.$food->foodPic)}}" alt="Food Photo Here" class="foodImage">
+                <img src="{{asset('storage/images/'.$food->foodPic)}}" alt="Food Photo Here" class="foodImage">
                 <h4 id='foodName' class="foodname">{{$food['foodName']}}</h4>
                 <h5 id="price">₱ {{$food['price']}}.00</h5>
                 <p id="description">{{$food['description']}}</p>

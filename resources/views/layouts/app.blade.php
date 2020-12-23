@@ -63,6 +63,9 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="/cart">Cart</a>
+                            </li>
                             <li  class="nav-item">
                                 <a class="nav-link" href="/landing">Home</a>
                             </li>

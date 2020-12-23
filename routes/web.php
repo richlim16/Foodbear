@@ -21,7 +21,10 @@ Route::get('/', function () {
 Route::get('/landing', function(){
     return view('landing');
 });
-
+Route::get('/add-to-cart/{id}', [
+    'uses' => 'FoodController@getAddtoCart',
+    'as' => 'food.addToCart'
+]);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\FoodModel;
 use App\Models\Cart;
 use App\Models\Hitory;
-
+use Session;
 class FoodController extends Controller
 {
     /**
@@ -17,6 +17,17 @@ class FoodController extends Controller
     public function index()
     {
         //
+    }
+
+    public function getAddToCart(Request $request, $id){
+        $items = Foodmodel::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') :null;
+        $cart = new Cart($oldCart);
+        $cart->add($items, $items->id);
+
+        $request->session()->put('cart', $cart);
+        dd($request->session()->get('cart'));
+        return redirect()->route('/home');
     }
 
     /**

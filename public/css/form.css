@@ -76,6 +76,27 @@
     .footer-title{font-size: 14px; margin-bottom: 0;}
         .footer-menu li{font: 10px; color: white; list-style: none;}
     .footer-desc{font-size: 12px; }
-    .highlight{color:#51dfff;}    
+    .highlight{color:#51dfff;}
 .inline-padding{padding-inline-start: 0;}
 .navigation{margin-right: 70px; margin-left: 20px;}
+
+/* This is styling for the table in the history page */
+table{
+  display: block;
+  margin:auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+tr:nth-of-type(odd){
+  background: #eee;
+}
+th{
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+td, th{
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}

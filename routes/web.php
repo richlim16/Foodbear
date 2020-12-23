@@ -28,3 +28,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/food', FoodController::class);
 Route::get('/foodForm', [FoodController::class, 'create']);
 Route::post('/addFood', [FoodController::class, 'store']);
+Route::get('/menu', [FoodController::class, 'menu']);

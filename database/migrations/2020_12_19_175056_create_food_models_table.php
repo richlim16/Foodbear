@@ -18,6 +18,7 @@ class CreateFoodModelsTable extends Migration
             $table->string('foodName');
             $table->integer('price');
             $table->text('description');
+            $table->string('foodPic');
             $table->timestamps();
         });
     }

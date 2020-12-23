@@ -35,18 +35,29 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
+        $destiantion_path = 'public/images';
         $foodName = $request->input('foodName');
         $price = $request->input('price');
         $description = $request->input('description');
+        $files = $_FILES['foodPic'];
+        $fileName = $files['name'];
+        $path = $request->file('foodPic')->storeAs($destiantion_path, $fileName);
+
+
         $food = new FoodModel;
         $food->foodName = $foodName;
         $food->price = $price;
         $food->description = $description;
-
+        $food->foodPic = $fileName;
         $food->save();
 
         return redirect('/home');
 
+    }
+    public function menu(){
+      $items = FoodModel::all();
+
+      return view('menu')->with('food', $items);
     }
 
     /**

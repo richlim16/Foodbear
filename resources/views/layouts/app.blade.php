@@ -50,6 +50,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/landing#product">Products</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/menu">Menu</a>
+                                </li>
 
                             @if (Route::has('login'))
                                 <li class="nav-item">

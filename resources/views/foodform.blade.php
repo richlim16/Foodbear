@@ -5,7 +5,7 @@
     <div class="form">
         <div id="form-container">
         <h1>FOOD INFO</h1>
-        <form action="/addFood" method="post">
+        <form action="/addFood" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group row">
                 <label for="foodName" class="col-md-4 col-form-label text-md-right">Food Name</label>
@@ -26,6 +26,13 @@
 
                 <div class="col-md-6">
                     <textarea id="description" type="text" name="description"  required autocomplete="off" autofocus placeholder="Php"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="foodPic" class="col-md-4 col-form-label text-md-right">Description</label>
+
+                <div class="col-md-6">
+                    <input id="foodPic" type="file" name="foodPic"  required autocomplete="off" autofocus placeholder="Place Your File Here"></input>
                 </div>
             </div>
 

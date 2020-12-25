@@ -7,11 +7,18 @@
     <th>Price</th>
   </thead>
   <tbody>
-    @foreach($history as $item)
+    @foreach($cart as $item)
     <tr>
     <td>{{$item['id']}}</td>
     <td>{{$item['foodName']}}</td>
     <td>{{$item['price']}}</td>
+    <td>
+      <form action="/deleteFromCart" method="post">
+        @csrf
+        <input type="hidden" name="cartId" value="{{$item['id']}}">
+        <input type="submit" name="sendIt" value="Delete">
+      </form>
+    </td>
     </tr>
     @endforeach
   </tbody>

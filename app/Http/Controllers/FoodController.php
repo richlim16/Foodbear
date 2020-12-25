@@ -57,15 +57,15 @@ class FoodController extends Controller
 
     }
     public function addToCart(Request $request){
-      $customerId = $request->input['customerId'];
-      $food = FoodModel::find($request->input['foodId']);
+      $customerId = $request->input('customerId');
+      $food = FoodModel::find($request->input('foodId'));
       $foodName = $food['foodName'];
       $price = $food['price'];
 
       $item = new Cart;
       $item['foodName'] = $foodName;
       $item['price'] = $price;
-      $cutomerId = $id;
+      $item['customerId'] = $customerId;
 
       $item->save();
 
@@ -96,6 +96,11 @@ class FoodController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+     public function showCart(Request $request){
+       $id = $request->input('customerId');
+       $cart = Cart::all()->where('customerId', "=", $id);
+       return view('cart')->with('cart', $cart);
+     }
     public function edit($id)
     {
         //
@@ -119,8 +124,11 @@ class FoodController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $item = Cart::find($request->input('cartId'));
+        $item->delete();
+
+        return view('/cart');
     }
 }

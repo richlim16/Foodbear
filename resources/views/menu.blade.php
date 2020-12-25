@@ -16,16 +16,16 @@
     <div class="container">
         <div class="row">
             @foreach($food as $food)
-              <input type="hidden" name="foodId" value="{{$food['id']}}">
-              <input type="hidden" name="price" value="{{$food['price']}}">
-              <input type="hidden" name="customerId" value="{{Auth::user()->id}}">
               <div class="col-3 offset-md center">
                   <img src="{{asset('storage/images/'.$food->foodPic)}}" alt="Food Photo Here" class="foodImage">
+                  @if(Auth::user())
                   <form action="/addToCart" method="post">
+                    @csrf
                     <input type="hidden" name="foodId" value="{{$food['id']}}">
                     <input type="hidden" name="customerId" value="{{Auth::user()->id}}">
                     <button type="submit" name="cart-btn">Add To Cart</button>
                   </form>
+                  @endif
                   <h4 id='foodName' class="foodname">{{$food['foodName']}}</h4>
                   <h5 id="price">₱ {{$food['price']}}.00</h5>
                   <p id="description">{{$food['description']}}</p>

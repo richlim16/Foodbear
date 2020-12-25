@@ -4,37 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FoodModel;
+use App\Models\HistoryModel;
 use App\Models\Cart;
 use Session;
 
 class FoodController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('foodform');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $destiantion_path = 'public/images';
@@ -77,12 +63,6 @@ class FoodController extends Controller
       return view('menu')->with('food', $items);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function history(Request $request)
     {
         $id = $request->input('customerId');
@@ -90,45 +70,41 @@ class FoodController extends Controller
         return view('history')->with('history', $history);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-     public function showCart(Request $request){
-       $id = $request->input('customerId');
-       $cart = Cart::all()->where('customerId', "=", $id);
-       return view('cart')->with('cart', $cart);
-     }
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+     public function showCart(Request $request){
+       $id = $request->input('customerId');
+       $cart = Cart::all()->where('customerId', "=", $id);
+       return view('cart')->with('cart', $cart);
+     }
     public function destroy(Request $request)
     {
         $item = Cart::find($request->input('cartId'));
         $item->delete();
 
-        return view('/cart');
+        $id = $request->input('customerId');
+        $cart = Cart::all()->where('customerId', "=", $id);
+        return view('cart')->with('cart', $cart);
+    }
+    public function submitOrder(Request $request){
+      $id  = $request->input('customerId');
+      $cart = Cart::all()->where('customerId', "=", $id);
+      foreach($cart as $item){
+        $new = new HistoryModel;
+        $new['foodName'] = $item['foodName'];
+        $new['price'] = $item['price'];
+        $new['customerId'] = $id;
+        $new->save();
+      }
+      Cart::all()->where('customerId', "=", $id)->each->delete();
+      return redirect('/menu');
     }
 }

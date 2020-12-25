@@ -15,6 +15,7 @@
     <td>
       <form action="/deleteFromCart" method="post">
         @csrf
+        <input type="hidden" id="customerId" name="customerId"value="{{Auth::user()->id}}">
         <input type="hidden" name="cartId" value="{{$item['id']}}">
         <input type="submit" name="sendIt" value="Delete">
       </form>
@@ -23,4 +24,9 @@
     @endforeach
   </tbody>
 </table>
+<form action="submitOrder" method="post">
+  @csrf
+  <input type="hidden" id="customerId" name="customerId" value="{{Auth::user()->id}}">
+  <input type="submit" name="submit" value="Purchase">
+</form>
 @endsection

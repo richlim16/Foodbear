@@ -33,3 +33,4 @@ Route::post('/history', [FoodController::class, 'history']);
 Route::post('/addToCart', [FoodController::class, 'addToCart']);
 Route::post('/cart', [FoodController::class, 'showCart']);
 Route::post('/deleteFromCart', [FoodController::class, 'destroy']);
+Route::post('/submitOrder', [FoodController::class, 'submitOrder']);

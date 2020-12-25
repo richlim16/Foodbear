@@ -16,6 +16,7 @@ class CreateHistoryModelsTable extends Migration
         Schema::create('history_models', function (Blueprint $table) {
           $table->id();
           $table->String('foodName');
+          $table->integer('price');
           $table->foreignId('customerId');
           $table->timestamps();
         });

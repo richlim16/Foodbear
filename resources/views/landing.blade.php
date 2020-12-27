@@ -22,7 +22,7 @@
                 Headquartered in Berlin, Germany. It operates in more than 40 countries across 5 continents.
                 foodbear allows users to conveniently discover food around their neighbourhood and directly order their favourite meals online or via mobile. <br><br>
 
-                In the Philippines, foodbear was launched in June 2014 and has since grown to over 1,000 partner restaurants nationwide. <br><br>
+                In the Philippines, foodbear was launched in June 2020 and has since grown to over 1,000 partner restaurants nationwide. <br><br>
 
                 We are a small team of problem solvers, designers, thinkers and tinkers, working around the clock to make foodbear the most powerful online tool for food delivery. 
                 We believe that ordering food should be easy, fast and definitely fun! <br><br>

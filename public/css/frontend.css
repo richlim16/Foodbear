@@ -69,3 +69,15 @@ input .border-remove{border: 0px solid white;}
 
 .foodname{font-weight: 700; margin-top: 10px;}
 .foodImage{border-radius: 25px;}
+
+
+/* History CSS */
+.history-container{
+    background-image: url('../images/foodbg-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    margin-bottom: 50px;}
+
+.history{width: 100%; border-collapse: collapse;}

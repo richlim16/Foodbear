@@ -75,7 +75,7 @@ input .border-remove{border: 0px solid white;}
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 250px;
+    height: 270px;
     margin-bottom: 50px;}
 
 .foodname{font-weight: 700; margin-top: 10px;}
@@ -87,7 +87,16 @@ input .border-remove{border: 0px solid white;}
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 250px;
+    height: 340px;
     margin-bottom: 50px;}
 
 .history{width: 100%; border-collapse: collapse;}
+
+/* Cart CSS */
+.cart-container{
+    background-image: url('../images/foodbg-5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 270px;
+    margin-bottom: 50px;}

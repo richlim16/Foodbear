@@ -7,7 +7,7 @@
             <div class="col offset-md">
                 <h1 class="product-title">Purchase History</h1>
                 <p class="div-separator"></p>
-                <h4>Recall your past transactions...</h4>
+                <h6>Recall your past transactions</h6>
             </div>
         </div>
     </div>

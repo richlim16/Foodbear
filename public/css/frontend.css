@@ -9,9 +9,18 @@ html{
 .center{text-align:center;}
 
 .gap{margin-top: 50px;}
+.gap1{margin-top: 15px;}
+
 .separator{margin-top: 60px; margin-bottom: 60px;}
+.separator1{margin-top: 30px; margin-bottom: 30px;}
+
 .separator-top{margin-top: 60px;}
+
 .separator-bottom{margin-bottom: 60px;}
+.separator-bottom1{margin-bottom: 30px;}
+
+.margin-default{margin: auto;}
+
 .div-separator{width: 100px; border-bottom-color: #51dfff; border-bottom-style: solid; border-bottom-width: 3px; margin-left: auto; margin-right: auto;}
 
 /* Login/Register/FoodForm CSS */
@@ -39,6 +48,8 @@ input .border-remove{border: 0px solid white;}
 .position{margin-left: auto; margin-right: auto;}
 .welcome-title{font-weight: bolder;font-size: 38px; letter-spacing: 1.5px; color:#fff; text-transform: uppercase;}
 .welcome-subtitle{color: white; font-size: 16px; margin-top: 15px;}
+
+.image-size{width: 200px; border-radius: 100%;}
 
 /* Product Section*/
 .product-title{text-transform: uppercase; font-weight: 700;}
@@ -69,7 +80,6 @@ input .border-remove{border: 0px solid white;}
 
 .foodname{font-weight: 700; margin-top: 10px;}
 .foodImage{border-radius: 25px;}
-
 
 /* History CSS */
 .history-container{

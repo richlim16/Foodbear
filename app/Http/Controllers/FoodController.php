@@ -39,7 +39,7 @@ class FoodController extends Controller
         $food->foodPic = $fileName;
         $food->save();
 
-        return redirect('/home');
+        return redirect('/menu');
 
     }
     public function addToCart(Request $request){

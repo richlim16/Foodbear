@@ -16,14 +16,14 @@
     <div class="container">
         <div class="row">
             @foreach($food as $food)
-              <div class="col-3 offset-md center">
+              <div class="col-3 offset-md center gap1">
                   <img src="{{asset('storage/images/'.$food->foodPic)}}" alt="Food Photo Here" class="foodImage">
                   @if(Auth::user())
                   <form action="/addToCart" method="post">
                     @csrf
                     <input type="hidden" name="foodId" value="{{$food['id']}}">
                     <input type="hidden" name="customerId" value="{{Auth::user()->id}}">
-                    <button type="submit" name="cart-btn">Add To Cart</button>
+                    <button type="submit" name="cart-btn" class="btn btn-primary gap1">Add To Cart</button>
                   </form>
                   @endif
                   <h4 id='foodName' class="foodname">{{$food['foodName']}}</h4>

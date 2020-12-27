@@ -119,7 +119,7 @@
         <div class="row">
             <div class="col-4 offset-md-1">
                 <div class="footer-desc">
-                    <a href="AdminLogin.php"><img class="footer-logo" src="images/foodbear-logo-w-title.png" alt="logo" style="width: 250px; margin-bottom: 10px;"></a>
+                    <a href=""><img class="footer-logo" src="images/foodbear-logo-w-title.png" alt="logo" style="width: 250px; margin-bottom: 10px;"></a>
                     <p style="text-align: justify;">
                         Food Bear group is the leading global online food delivery marketplace. Headquatered in Cebu, Philippines. It operates
                         is more than 40 cities in the nation. Food Bear allows users to conveniently discover food around their neighborhood and directly order

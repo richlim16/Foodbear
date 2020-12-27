@@ -20,7 +20,7 @@
                 <div class="col offset-md">
                     <h1 class="product-title">Product</h1>
                     <p class="div-separator"></p>
-                    <h6>Most purchase foods</h6>
+                    <h3>Most purchased foods</h3>
                 </div>
             </div>
         </div>

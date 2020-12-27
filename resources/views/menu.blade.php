@@ -8,7 +8,7 @@
             <div class="col offset-md">
                 <h1 class="product-title">Product</h1>
                 <p class="div-separator"></p>
-                <h6>Find your food cravings now!</h6>
+                <h4>Find your food cravings now!</h4>
             </div>
         </div>
     </div>

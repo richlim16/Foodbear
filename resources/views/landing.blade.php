@@ -13,7 +13,16 @@
             </div>
         </div>
     </div>
-        
+    <div class="product separator" id="product">
+        <div class="container">
+            <div class="row separator-top center">
+                <div class="col offset-md">
+                    <h1 class="product-title">ABOUT US</h1>
+                    <p class="div-separator"></p>
+                </div>
+            </div>
+        </div>
+    </div> 
     <div class="container gap">
         <div class="row">
             <img src="../images/foodbear-logo-w-title-black.png" alt="" srcset="" class="separator-bottom margin-default">
@@ -33,13 +42,14 @@
         </div>
     </div>
 
+
+
     <div class="product separator" id="product">
         <div class="container">
             <div class="row separator-top center">
                 <div class="col offset-md">
-                    <h1 class="product-title">About Us</h1>
+                    <h1 class="product-title">MEET THE PROJECT TEAM</h1>
                     <p class="div-separator"></p>
-                    <h6>Know who create FoodBear</h6>
                 </div>
             </div>
         </div>

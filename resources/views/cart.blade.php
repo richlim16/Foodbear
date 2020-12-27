@@ -34,16 +34,16 @@
         @csrf
         <input type="hidden" id="customerId" name="customerId"value="{{Auth::user()->id}}">
         <input type="hidden" name="cartId" value="{{$item['id']}}">
-        <input type="submit" name="sendIt" value="Delete">
+        <input type="submit" name="sendIt" value="REMOVE ITEM">
       </form>
     </td>
     </tr>
     @endforeach
   </tbody>
 </table>
-<form action="submitOrder" method="post">
+<form action="submitOrder" class="center" method="post">
   @csrf
   <input type="hidden" id="customerId" name="customerId" value="{{Auth::user()->id}}">
-  <input type="submit" name="submit" value="PROCEED TO CHECKOUT">
+  <input type="submit" name="submit" value="PROCEED TO PURCHASE">
 </form>
 @endsection

@@ -6,6 +6,7 @@
     <th>Food Name</th>
     <th>Price</th>
   </thead>
+  <h1>Helllllloooooo</h1>
   <tbody>
     @foreach($cart as $item)
     <tr>

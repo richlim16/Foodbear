@@ -1,13 +1,29 @@
 @extends('layouts\app')
 @section('content')
+
+<div class="cart-container" id="top"></div>
+
+<div class="container">
+        <div class="row separator-top center">
+            <div class="col offset-md">
+                <h1 class="product-title">Cart</h1>
+                <p class="div-separator"></p>
+                <h4>Review your order...</h4>
+            </div>
+        </div>
+    </div>
+
 <table>
-  <thead>
-    <th>Order ID</th>
-    <th>Food Name</th>
-    <th>Price</th>
-  </thead>
-  <h1>test</h1>
   <tbody>
+   <div class="container">
+    <div class="row center">
+      <table class>
+      <thead>
+          <th class="center">Order No</th>
+          <th class="center" style="width: 700px;">Food Name</th>
+          <th class="center" style="width: 150px;">Price</th>
+        </thead>
+        <tbody>
     @foreach($cart as $item)
     <tr>
     <td>{{$item['id']}}</td>
@@ -28,6 +44,6 @@
 <form action="submitOrder" method="post">
   @csrf
   <input type="hidden" id="customerId" name="customerId" value="{{Auth::user()->id}}">
-  <input type="submit" name="submit" value="Purchase">
+  <input type="submit" name="submit" value="PROCEED TO CHECKOUT">
 </form>
 @endsection

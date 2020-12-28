@@ -70,14 +70,20 @@ class FoodController extends Controller
         return view('history')->with('history', $history);
     }
 
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        //
+      $item = Cart::find($request->input('cartId'));
+        return view('menu')->with('food', $items);
     }
 
     public function update(Request $request, $id)
     {
-        //
+      $item = Cart::find($request->input('cartId'));
+      $item->update();
+
+      $id = $request->input('customerId');
+      $cart = Cart::all()->where('customerId', "=", $id);
+      return view('cart')->with('cart', $cart);
     }
 
      public function showCart(Request $request){
@@ -105,6 +111,8 @@ class FoodController extends Controller
         $new->save();
       }
       Cart::all()->where('customerId', "=", $id)->each->delete();
+      return redirect('/menu');
+      Cart::all()->where('customerId', "=", $id)->each->update();
       return redirect('/menu');
     }
 }

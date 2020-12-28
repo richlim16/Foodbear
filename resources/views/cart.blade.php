@@ -35,6 +35,12 @@
                   <input type="submit" name="sendIt" value="REMOVE ITEM">
                 </form>
               </td>
+              <form action="/editFromCart" method="post">
+                  @csrf
+                  <input type="hidden" id="customerId" name="customerId"value="{{Auth::user()->id}}">
+                  <input type="hidden" name="cartId" value="{{$item['id']}}">
+                  <input type="submit" name="sendIt" value="Edit Item">
+              </form>
               </tr>
             @endforeach
           </tbody>

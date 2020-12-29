@@ -26,6 +26,18 @@
                     <button type="submit" name="cart-btn" class="btn btn-primary gap1">Add To Cart</button>
                   </form>
                   @endif
+                  @if(Auth::user()->admin == 1)
+                  <form action="/editItem" method="post">
+                    @csrf
+                    <input type="hidden" name="foodId" value="{{$food['id']}}">
+                    <button type="submit" name="cart-btn" class="btn btn-primary gap1">Edit</button>
+                  </form>
+                  <form action="/deleteItem" method="post">
+                    @csrf
+                    <input type="hidden" name="foodId" value="{{$food['id']}}">
+                    <button type="submit" name="cart-btn" class="btn btn-primary gap1">Delete</button>
+                  </form>
+                  @endif
                   <h4 id='foodName' class="foodname">{{$food['foodName']}}</h4>
                   <h5 id="price">₱ {{$food['price']}}.00</h5>
                   <p id="description">{{$food['description']}}</p>

@@ -18,7 +18,7 @@ class CreateFoodModelsTable extends Migration
             $table->string('foodName');
             $table->float('price');
             $table->text('description');
-            $table->string('foodPic');
+            $table->string('foodPic')->nullable();
             $table->timestamps();
         });
         DB::table('food_models')->insert(

@@ -34,5 +34,6 @@ Route::post('/addToCart', [FoodController::class, 'addToCart']);
 Route::post('/cart', [FoodController::class, 'showCart']);
 Route::post('/deleteFromCart', [FoodController::class, 'destroy']);
 Route::post('/submitOrder', [FoodController::class, 'submitOrder']);
-Route::post('/editFromCart', [FoodController::class, 'edit']);
-Route::post('/updateFromCart', [FoodController::class, 'update']);
+Route::post('/editItem', [FoodController::class, 'edit']);
+Route::post('/editFood', [FoodController::class, 'editFood']);
+Route::post('/deleteItem', [FoodController::class, 'delete']);

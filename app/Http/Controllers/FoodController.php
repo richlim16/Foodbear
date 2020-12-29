@@ -70,20 +70,39 @@ class FoodController extends Controller
         return view('history')->with('history', $history);
     }
 
-    public function edit(Request $request, $id)
+    public function edit(Request $request)
     {
-      $item = Cart::find($request->input('cartId'));
-        return view('menu')->with('food', $items);
+      $item = FoodModel::find($request->input('foodId'));
+
+      return view('editForm')->with('item',$item);
+    }
+    public function editFood(Request $request){
+      $food = FoodModel::find($request->input('foodId'));
+      if($food){
+        $foodName = $request->input('foodName');
+        $price = $request->input('price');
+        $description = $request->input('description');
+
+        $food->foodName = $foodName;
+        $food->price = $price;
+        $food->description = $description;
+        $food->save();
+      }
+
+      return redirect('/menu');
+    }
+    public function delete(Request $request){
+      $item = FoodModel::find($request->input('foodId'));
+      $item->delete();
+
+      $items = FoodModel::all();
+
+      return view('menu')->with('food', $items);
     }
 
     public function update(Request $request, $id)
     {
-      $item = Cart::find($request->input('cartId'));
-      $item->update();
 
-      $id = $request->input('customerId');
-      $cart = Cart::all()->where('customerId', "=", $id);
-      return view('cart')->with('cart', $cart);
     }
 
      public function showCart(Request $request){
@@ -110,9 +129,7 @@ class FoodController extends Controller
         $new['customerId'] = $id;
         $new->save();
       }
-      Cart::all()->where('customerId', "=", $id)->each->delete();
-      return redirect('/menu');
-      Cart::all()->where('customerId', "=", $id)->each->update();
-      return redirect('/menu');
+      $history = HistoryModel::all()->where('customerId',"=" ,$id);
+      return view('history')->with('history', $history);
     }
 }

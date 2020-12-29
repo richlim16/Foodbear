@@ -78,7 +78,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/menu">Menu</a>
                             </li>
-                            @if(Auth::user()->admin == true)
+                            @if(Auth::user()->admin == 1)
                             <li>
                                 <a class="nav-link" href="/foodForm">Food Form</a>
                             </li>
